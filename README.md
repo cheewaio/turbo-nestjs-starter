@@ -14,57 +14,57 @@ This monorepo using PNPM as the package manager and Turborepo as the build syste
 ## Creating a new repo from this starter
 
 ```bash
-$ pnpm dlx create-turbo@latest -m pnpm -e https://github.com/cheewaio/turbo-nestjs-starter.git
+pnpm dlx create-turbo@latest -m pnpm -e https://github.com/cheewaio/turbo-nestjs-starter
 ```
 
 ## Setup
 
 ```bash
-$ make setup
+make setup
 ```
 
 ## Package dependencies
 
 ```bash
 # Adding runtime dependencies
-$ pnpm add <package> --filter <projct>
+pnpm add <package> --filter <projct>
 
 # Adding development dependencies
-$ pnpm add -D <package> -w
+pnpm add -D <package> -w
 
 # Installing dependencies
-$ pnpm install
+pnpm install
 ```
 
 ## Build packages
 
 ```bash
 # Build all packages
-$ make build
+make build
 
 # Clean build
-$ make clean
+make clean
 ```
 
 ## Running
 
 ```bash
 # Development mode
-$ make dev
+make dev
 
 # Production mode
-$ make prod
+make prod
 ```
 
 ## Testing
 
 ```bash
 # Unit tests
-$ make test
+make test
 
 # Unit tests with coverage
-$ make coverage
+make coverage
 
 # End-to-end tests
-$ make e2e
+make e2e
 ```
