@@ -11,15 +11,17 @@
     },
     "prod": {},
     "format": {},
-    "lint": {},
+    "lint": {
+      "dependsOn": ["format"]
+    },
     "test": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["build"]
     },
     "test:coverage": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["build"]
     },
     "test:e2e": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["build"]
     }
   }
 }

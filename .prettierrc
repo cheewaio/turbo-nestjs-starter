@@ -1,4 +1,18 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": ["**/*.js", "**/*.ts"],
+      "options": {
+        "printWidth": 120,
+        "singleQuote": true
+      }
+    },
+    {
+      "files": ["**/*.json"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

@@ -5,8 +5,8 @@
   "scripts": {
     "build": "tsc",
     "clean": "rimraf dist",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "format": "prettier -l -w '{src,test}/**/*.{js,ts,json,yaml}'",
+    "lint": "eslint '{src,test}/**/*.ts' --fix",
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
