@@ -28,6 +28,8 @@ install: ## Installs NPM dependencies
 
 setup: ## Setup the environment for auto-linting staged files
 	@ [ -f .vscode/launch.json ] || cp .vscode/launch.example.json .vscode/launch.json
+	@ [ command -v pnpm > /dev/null 2>&1 ] || npm install -g pnpm
+	@ [ command -v turbo > /dev/null 2>&1 ] || npm install -g turbo
 	@ pnpm install
 	@ pnpm run setup
 
@@ -45,6 +47,9 @@ coverage: ## Runs unit tests with coverage
 
 e2e: ## Runs end-to-end tests
 	@ turbo test:e2e
+
+release: ## Release the build
+	@ pnpm run release
 
 ############################################################
 ##@ Help
